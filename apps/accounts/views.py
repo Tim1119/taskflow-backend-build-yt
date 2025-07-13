@@ -16,6 +16,8 @@ def register(request):
     """
     Register a new user with password confirmation
     """
+
+    print('------>',request.data)
     username = request.data.get('username')
     email = request.data.get('email')
     password = request.data.get('password')
