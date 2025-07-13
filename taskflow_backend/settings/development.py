@@ -12,3 +12,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
 ]
 
+
+# In your development settings (settings/development.py)
+SECURE_SSL_REDIRECT = False  # Django won't redirect to HTTPS
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False

@@ -28,7 +28,8 @@ DJANGO_APPS = [
 
 
 LOCAL_APPS = [
-    
+    "apps.accounts",
+    "apps.tasks",
 ]
 
 
@@ -166,4 +167,4 @@ SIMPLE_JWT = {
 }
 
 
-CORS_ALLOW_CREDENTIALS = True
+

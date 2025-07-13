@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 
-class TaskListCreatevIew(generics.ListCreateAPIView):
+class TaskListCreateView(generics.ListCreateAPIView):
     """
     GET: List all tasks for the authenticated user
     POST: Create a new task for the authenticated user
@@ -60,7 +60,7 @@ class TaskDetailView(generics.RetrieveDestroyAPIView):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def get_statistics(request):
+def task_statistics(request):
     """
     Get task statistics for the authenticated user
     """

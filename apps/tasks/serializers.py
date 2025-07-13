@@ -48,18 +48,3 @@ class TaskCreateSerializer(serializers.ModelSerializer):
         if not value or len(value.strip()) < 1:
             raise serializers.ValidationError("Title is required")
         return value.strip()
-
-class UserSerializer(serializers.ModelSerializer):
-    """
-    Serializer for User model
-    """
-    task_count = serializers.SerializerMethodField()
-    
-    class Meta:
-        model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'task_count']
-        read_only_fields = ['id']
-    
-    def get_task_count(self, obj):
-        """Get total number of tasks for this user"""
-        return obj.tasks.count()
